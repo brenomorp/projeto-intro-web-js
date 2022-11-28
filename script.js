@@ -1,4 +1,23 @@
-const cursos = ["HTML e CSS", "JavaScript", "APIs REST"];
+const cursos = [
+    {
+        curso: "HTML e CSS",
+        descricao: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci quibusdam laudantium debitis dolore quia amet cum inventore, vitae enim ea eaque voluptate aperiam in ratione eos, repellat harum vero autem!",
+        duracao: "1 mês",
+        valor: 500
+    },
+    {
+        curso: "JavaScript",
+        descricao: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci quibusdam laudantium debitis dolore quia amet cum inventore, vitae enim ea eaque voluptate aperiam in ratione eos, repellat harum vero autem!",
+        duracao: "2 meses",
+        valor: 900
+    },
+    {
+        curso: "APIsRest",
+        descricao: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci quibusdam laudantium debitis dolore quia amet cum inventore, vitae enim ea eaque voluptate aperiam in ratione eos, repellat harum vero autem!",
+        duracao: "6 meses",
+        valor: 2000
+    }
+];
 
 const turmas = [
     {
@@ -104,3 +123,84 @@ const estudantes = [
         parcelas: 500
     }
 ];
+
+const carrinhoCursos = [500, 900, 400]
+
+const parcelarCurso = (parcelas, carrinho) => {
+    let desconto = 1
+    let total = 0
+
+    if (parcelas < 3) {
+        desconto -= .2
+    }
+
+    switch (carrinho.length) {
+        case 3:
+            desconto -= .15
+
+            break;
+
+        case 2:
+            desconto -= .1
+
+            break;
+    }
+
+    for (let i in carrinho) {
+        total += carrinho[i]
+    }
+
+    console.log(`O valor do pagamento é de R$ ${total * desconto} com desconto, parcelado em ${parcelas}x de R$ ${(total * desconto) / 2}`);
+}
+
+const buscarCurso = (curso) => {
+    for (let i in cursos) {
+        if (cursos[i].curso === curso) {
+            console.log(cursos[i].curso);
+        } else {
+            console.log("Curso não encontrado.");
+        }
+    }
+}
+
+const buscarTurma = (turma) => {
+    for (let i in turmas) {
+        if (turmas[i].turma === turma) {
+            console.log(turmas[i].turma);
+        } else {
+            console.log("Turma não encontrada.");
+        }
+    }
+}
+
+const buscarEstudante = (estudante) => {
+    for (let i in estudantes) {
+        if (estudantes[i].estudante === estudante) {
+            console.log(estudantes[i].estudante);
+        } else {
+            console.log("Estudante não encontrado.");
+        }
+    }
+}
+
+const matricular = (nome, curso, turma, nParcelas) => {
+    let novoEstudante = {
+        estudante: nome,
+        turma: turma,
+        curso: curso,
+        nParcelas: nParcelas
+    }
+
+    estudantes.push(novoEstudante)
+    console.log(`Aluno matriculado
+    Nome: ${nome}
+    Curso: ${curso}
+    Turma: ${turma}`);
+    console.log(estudantes);
+}
+
+parcelarCurso(2, carrinhoCursos)
+// buscarCurso("HTML e CSS")
+// buscarTurma("Hipátia")
+// buscarEstudante("Chris Evans")
+// matricular("Breno", "JavaScript", "Ozemela", 12)
