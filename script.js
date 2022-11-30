@@ -153,34 +153,44 @@ const parcelarCurso = (parcelas, carrinho) => {
     console.log(`O valor do pagamento é de R$ ${total * desconto} com desconto, parcelado em ${parcelas}x de R$ ${(total * desconto) / 2}`);
 }
 
-const buscarCurso = (curso) => {
-    for (let i in cursos) {
-        if (cursos[i].curso === curso) {
-            console.log(cursos[i].curso);
-        } else {
-            console.log("Curso não encontrado.");
-        }
-    }
+const buscarCurso = (nomeCurso) => {
+
+    return cursos.find(({ curso }) => curso.includes(nomeCurso))
+
+    // for (let i in cursos) {
+    //     if (cursos[i].curso === curso) {
+    //         return cursos[i]
+    //     } else {
+    //         console.log("Curso não encontrado.");
+    //     }
+    // }
 }
 
-const buscarTurma = (turma) => {
-    for (let i in turmas) {
-        if (turmas[i].turma === turma) {
-            console.log(turmas[i].turma);
-        } else {
-            console.log("Turma não encontrada.");
-        }
-    }
+const buscarTurma = (turmaPesquisada) => {
+    let resPesquisa = turmas.filter(({ turma }) => turmaPesquisada == turma)
+
+    return resPesquisa
+
+    // for (let i in turmas) {
+    //     if (turmas[i].turma === turmaPesquisada) {
+    //         return turmas[i]
+    //     } else {
+    //         console.log("Turma não encontrada.");
+    //     }
+    // }
 }
 
-const buscarEstudante = (estudante) => {
-    for (let i in estudantes) {
-        if (estudantes[i].estudante === estudante) {
-            console.log(estudantes[i].estudante);
-        } else {
-            console.log("Estudante não encontrado.");
-        }
-    }
+const buscarEstudante = (nome) => {
+    // for (let i in estudantes) {
+    //     if (estudantes[i].estudante === estudante) {
+    //         return estudantes[i]
+    //     } else {
+    //         console.log("Estudante não encontrado.");
+    //     }
+    // }
+
+    // return estudantes.find(e => e.estudante.includes(nome)) // outra forma de fazer
+    return estudantes.find(({ estudante }) => estudante.includes(nome))
 }
 
 const matricular = (nome, curso, turma, nParcelas) => {
@@ -199,8 +209,29 @@ const matricular = (nome, curso, turma, nParcelas) => {
     console.log(estudantes);
 }
 
-parcelarCurso(2, carrinhoCursos)
-// buscarCurso("HTML e CSS")
-// buscarTurma("Hipátia")
-// buscarEstudante("Chris Evans")
+const carrinho = (curso) => {
+    let cursoPesquisado = curso("HTML e CSS")
+    carrinhoCursos.push(cursoPesquisado.valor)
+
+}
+
+const relatorioEstudante = (estudante) => {
+    for (let i in estudantes) {
+        if (estudante === estudantes[i].estudante) {
+            console.log(`Aluno: ${estudantes[i].estudante}
+Turma: ${estudantes[i].turma}
+Curso: ${estudantes[i].curso}
+Valor Total: R$ ${estudantes[i].valor}
+Valor Parcela: R$ ${estudantes[i].parcelas}
+Nº Parcelas: ${estudantes[i].nParcelas}`);
+        }
+    }
+}
+
+// parcelarCurso(2, carrinhoCursos)
+// console.log(buscarCurso("HTML"));
+// console.log(buscarTurma("Hipátia"))
+// console.log(buscarEstudante("Hal"))
 // matricular("Breno", "JavaScript", "Ozemela", 12)
+// carrinho(buscarCurso)
+// relatorioEstudante("Chris Evans")
