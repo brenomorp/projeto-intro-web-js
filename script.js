@@ -155,10 +155,10 @@ const parcelarCurso = (parcelas, carrinho) => {
 
 const buscarCurso = (nomeCurso) => {
 
-    return cursos.find(({ curso }) => curso.includes(nomeCurso))
+    return cursos.find(({ curso }) => curso.toLocaleLowerCase().includes(nomeCurso.toLocaleLowerCase()))
 
     // for (let i in cursos) {
-    //     if (cursos[i].curso === curso) {
+    //     if (cursos[i].curso === nomeCurso) {
     //         return cursos[i]
     //     } else {
     //         console.log("Curso não encontrado.");
