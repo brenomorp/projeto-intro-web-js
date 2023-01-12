@@ -150,7 +150,7 @@ const parcelarCurso = (parcelas, carrinho) => {
         total += carrinho[i]
     }
 
-    console.log(`O valor do pagamento é de R$ ${total * desconto} com desconto, parcelado em ${parcelas}x de R$ ${(total * desconto) / 2}`);
+    console.log(`O valor do pagamento é de R$ ${total * desconto} com desconto, parcelado em ${parcelas}x de R$ ${(total * desconto) / parcelas}`);
 }
 
 const buscarCurso = (nomeCurso) => {

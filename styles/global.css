@@ -1,0 +1,126 @@
+:root {
+    --black: #0E0E0E;
+    --white: #FBFBFB;
+    --yellow: #F6C34A;
+    --grey: #707070;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* HEADER */
+
+header {
+    background-color: var(--white);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    gap: 3em;
+    justify-content: center;
+    align-items: center;
+}
+
+header li a {
+    text-decoration: none;
+    color: var(--black);
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: var(--yellow);
+    /* height: 30vh; */
+    width: 100%;
+    padding: 0 10em 2em 10em;
+
+    display: grid;
+    grid-template-rows: 1fr .5fr 3fr .5fr;
+    grid-template-columns: 1.5fr 1fr 1fr .5fr;
+    grid-template-areas:
+        " img . . ."
+        "adress-title links-title social-title area-title"
+        "map links social-icons area-icons"
+        "adress . . .";
+    align-content: center;
+    justify-content: center;
+}
+
+footer>img {
+    grid-area: img;
+    align-self: center;
+}
+
+footer>h4:nth-of-type(1) {
+    grid-area: adress-title;
+    align-self: center;
+}
+
+footer>h4:nth-of-type(2) {
+    grid-area: links-title;
+    align-self: center;
+}
+
+footer>h4:nth-of-type(3) {
+    grid-area: social-title;
+    align-self: center;
+}
+
+footer>h4:nth-of-type(4) {
+    grid-area: area-title;
+    align-self: center;
+}
+
+footer iframe {
+    grid-area: map;
+}
+
+.footer-links {
+    grid-area: links;
+    display: flex;
+    flex-direction: column;
+    gap: .3em;
+}
+
+
+.footer-social-icons {
+    grid-area: social-icons;
+}
+
+.footer-area-links {
+    grid-area: area-icons;
+    display: flex;
+    flex-direction: column;
+    gap: .3em;
+}
+
+.adress {
+    grid-area: adress;
+    align-self: center;
+}
+
+footer li {
+    list-style: none;
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+}
+
+footer a:hover {
+    color: var(--white);
+}
