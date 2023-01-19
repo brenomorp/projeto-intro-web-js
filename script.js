@@ -218,12 +218,14 @@ const carrinho = (curso) => {
 const relatorioEstudante = (estudante) => {
     for (let i in estudantes) {
         if (estudante === estudantes[i].estudante) {
-            console.log(`Aluno: ${estudantes[i].estudante}
-Turma: ${estudantes[i].turma}
-Curso: ${estudantes[i].curso}
-Valor Total: R$ ${estudantes[i].valor}
-Valor Parcela: R$ ${estudantes[i].parcelas}
-Nº Parcelas: ${estudantes[i].nParcelas}`);
+            console.log(`
+                Aluno: ${estudantes[i].estudante}
+                Turma: ${estudantes[i].turma}
+                Curso: ${estudantes[i].curso}
+                Valor Total: R$ ${estudantes[i].valor}
+                Valor Parcela: R$ ${estudantes[i].parcelas}
+                Nº Parcelas: ${estudantes[i].nParcelas}
+            `);
         }
     }
 }
