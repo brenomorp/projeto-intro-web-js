@@ -22,13 +22,17 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 10vh;
+    height: 15vh;
+}
+
+header img {
+    width: 18vw;
 }
 
 header ul {
     display: flex;
     list-style: none;
-    gap: 3em;
+    gap: 3.5em;
     justify-content: center;
     align-items: center;
 }
@@ -37,14 +41,14 @@ header li a {
     text-decoration: none;
     color: var(--black);
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 1.5rem;
+    line-height: 36px;
 }
 
 /* FOOTER */
 
 footer {
     background-color: var(--yellow);
-    /* height: 30vh; */
     width: 100%;
     padding: 0 10em 2em 10em;
 
@@ -58,11 +62,23 @@ footer {
         "adress . . .";
     align-content: center;
     justify-content: center;
+    border-top: 2px solid var(--black);
 }
 
 footer>img {
     grid-area: img;
     align-self: center;
+}
+
+footer h4 {
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    margin-bottom: 1.5em;
+}
+
+footer a {
+    font-size: 1rem;
+    line-height: 1.5rem;
 }
 
 footer>h4:nth-of-type(1) {
@@ -91,21 +107,30 @@ footer iframe {
 
 .footer-links {
     grid-area: links;
-    display: flex;
-    flex-direction: column;
-    gap: .3em;
 }
 
+.links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
 
 .footer-social-icons {
     grid-area: social-icons;
+    display: flex;
+    gap: 1em;
+    align-items: flex-start;
+}
+
+.footer-social-icons img {
+    width: 2rem;
 }
 
 .footer-area-links {
     grid-area: area-icons;
     display: flex;
     flex-direction: column;
-    gap: .3em;
+    gap: 1em;
 }
 
 .adress {

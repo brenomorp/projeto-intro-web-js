@@ -190,7 +190,9 @@ const buscarEstudante = (nome) => {
     // }
 
     // return estudantes.find(e => e.estudante.includes(nome)) // outra forma de fazer
-    return estudantes.find(({ estudante }) => estudante.includes(nome))
+    const estudante = estudantes.find(({ estudante }) => estudante.toLocaleLowerCase().includes(nome.toLocaleLowerCase()))
+
+    return estudante
 }
 
 const matricular = (nome, curso, turma, nParcelas) => {
@@ -233,7 +235,7 @@ const relatorioEstudante = (estudante) => {
 // parcelarCurso(2, carrinhoCursos)
 // console.log(buscarCurso("HTML"));
 // console.log(buscarTurma("Hipátia"))
-// console.log(buscarEstudante("Hal"))
+console.log(buscarEstudante("berry"))
 // matricular("Breno", "JavaScript", "Ozemela", 12)
 // carrinho(buscarCurso)
 // relatorioEstudante("Chris Evans")
