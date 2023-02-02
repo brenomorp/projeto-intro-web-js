@@ -1,0 +1,97 @@
+.cursos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--yellow);
+    color: var(--black);
+    height: 70vh;
+    gap: 6em;
+}
+
+.card-cursos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6em;
+}
+
+.card-cursos article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--white);
+    border-radius: 10px;
+    width: 24em;
+    height: 23em;
+    padding: 2.625em 2.375em;
+}
+
+.card-cursos article h2 {
+    font-size: 2.125rem;
+    line-height: 3.1875rem;
+}
+
+.card-cursos article p {
+    font-size: 1rem;
+    line-height: 1.3619rem;
+}
+
+.cursos a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--white);
+    background-color: var(--black);
+    width: 20em;
+    height: 3em;
+    font-size: 1.3rem;
+    border-radius: 10px;
+}
+
+.conteudo-cursos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 3em;
+    background-color: var(--black);
+    padding: 11em 0;
+}
+
+.conteudo-cursos article {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--white);
+    color: var(--black);
+    width: 60vw;
+    height: 240px;
+    border-radius: 10px;
+}
+
+.conteudo-cursos h2 {
+    font-size: 2.125rem;
+    line-height: 3.1875rem;
+}
+
+.conteudo-cursos li {
+    font-size: 1rem;
+    line-height: 1.3619rem;
+    text-decoration: none;
+    list-style: none;
+}
+
+.modulos {
+    display: flex;
+    flex-direction: column;
+}
+
+.whatsapp-icon {
+    position: fixed;
+    right: 3em;
+    bottom: 3em;
+    width: 5rem;
+}
