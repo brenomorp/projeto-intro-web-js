@@ -1,0 +1,67 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 70vh;
+    background-color: var(--black);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3em 4em;
+    text-align: start;
+    background-color: var(--white);
+    color: var(--black);
+    font-weight: 700;
+    border-radius: 6px;
+    max-height: 80%;
+}
+
+form h1 {
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    margin-bottom: 1em;
+}
+
+form label {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+form input {
+    height: 3.5em;
+    width: 20vw;
+    margin-bottom: .5em;
+    border: 1px solid var(--black);
+    border-radius: 6px;
+}
+
+.sub-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--yellow);
+    border: none;
+    border-radius: 6px;
+    margin-top: 2em;
+    color: var(--black);
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+#textArea {
+    resize: none;
+    height: 10em;
+    border: 1px solid var(--black);
+    border-radius: 6px;
+}
+
+.whatsapp-icon {
+    position: fixed;
+    right: 3em;
+    bottom: 3em;
+    width: 5rem;
+}

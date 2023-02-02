@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/global.css">
+    <link rel="stylesheet" href="./styles/contato.css">
     <title>Contato</title>
 </head>
 
@@ -26,17 +27,21 @@
             </ul>
         </nav>
     </header>
-    <section>
+    <main>
         <form action="">
+            <h1>Fale Conosco</h1>
             <label for="name">Name</label>
             <input type="text" name="name" id="name">
             <label for="email">Email</label>
             <input type="email" name="email" id="email">
             <label for="mensagem">Mensagem</label>
-            <textarea name="mensagem" id="" cols="30" rows="10"></textarea>
-            <input type="submit" value="Enviar">
+            <textarea name="mensagem" id="textArea" cols="30" rows="10"></textarea>
+            <input class="sub-button" type="submit" value="Enviar">
         </form>
-    </section>
+        <figure>
+            <img class="whatsapp-icon" src="./assets/whatsapp-icon.svg" alt="Ícone do Whatsapp">
+        </figure>
+    </main>
     <footer>
         <img src="./assets/logo-labescola.svg" alt="Logo LabEscola">
         <h4>Endereço</h4>
