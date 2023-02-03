@@ -166,9 +166,10 @@ const buscarCurso = (nomeCurso) => {
     // }
 }
 
-const buscarTurma = (turmaPesquisada) => {
-    let resPesquisa = turmas.filter(({ turma }) => turmaPesquisada == turma)
-
+const buscarTurma = () => {
+    let turmaPesquisada = document.querySelector('#search').value
+    let resPesquisa = turmas.filter(({ turma }) => turmaPesquisada.toLocaleLowerCase() == turma.toLocaleLowerCase())
+    console.log(resPesquisa)
     return resPesquisa
 
     // for (let i in turmas) {
@@ -217,25 +218,23 @@ const carrinho = (curso) => {
 
 }
 
-const relatorioEstudante = (estudante) => {
+const relatorioEstudante = () => {
+    let estudante = document.querySelector('#nameFinanceiro').value
+    let resRelatorio = document.querySelector('#resRelatorio')
     for (let i in estudantes) {
-        if (estudante === estudantes[i].estudante) {
-            console.log(`
-                Aluno: ${estudantes[i].estudante}
-                Turma: ${estudantes[i].turma}
-                Curso: ${estudantes[i].curso}
-                Valor Total: R$ ${estudantes[i].valor}
-                Valor Parcela: R$ ${estudantes[i].parcelas}
-                Nº Parcelas: ${estudantes[i].nParcelas}
-            `);
+        if (estudante.toLocaleLowerCase() === estudantes[i].estudante.toLocaleLowerCase()) {
+            resRelatorio.innerHTML = `
+            <p>Aluno: ${estudantes[i].estudante}</p>
+            <p>Turma: ${estudantes[i].turma}</p>
+            <p>Curso: ${estudantes[i].curso}</p>
+            <p>Valor total: R$ ${estudantes[i].valor}</p>
+            <p>Valor parcela: R$ ${estudantes[i].parcelas}</p>
+            <p>N.º parcelas: ${estudantes[i].nParcelas}</p>
+            `;
+        } else {
+            resRelatorio.innerHTML = `
+                <p>Aluno não encontrado</p>
+            `
         }
     }
 }
-
-// parcelarCurso(2, carrinhoCursos)
-// console.log(buscarCurso("HTML"));
-// console.log(buscarTurma("Hipátia"))
-console.log(buscarEstudante("berry"))
-// matricular("Breno", "JavaScript", "Ozemela", 12)
-// carrinho(buscarCurso)
-// relatorioEstudante("Chris Evans")

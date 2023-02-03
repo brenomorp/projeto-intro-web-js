@@ -35,10 +35,10 @@
                 <li>Financeiro Alunos</li>
             </ul>
         </aside>
-        <section class="turmas hidden" id="turmas">
+        <section class="turmas" id="turmas">
             <div class="search-bar">
                 <input type="search" name="search" id="search">
-                <button>Buscar</button>
+                <button onclick="buscarTurma()">Buscar</button>
             </div>
             <div class="cards-container">
                 <article class="cards card1" id="card1">
@@ -141,7 +141,7 @@
                 <p>Turma: Clarke</p>
             </div>
         </section>
-        <section class="financeiro" id="financeiro">
+        <section class="financeiro hidden" id="financeiro">
             <div>
                 <div>
                     <h2>Financeiro</h2>
@@ -161,19 +161,14 @@
             <div class="relatorio-wrapper">
                 <div>
                     <h2>Relatório do Aluno</h2>
-                    <form action="" class="form-relatorio">
+                    <div class="form-relatorio">
                         <label for="name-financeiro">Nome</label>
-                        <input type="search" name="name-financeiro" id="name-financeiro">
-                        <input type="submit" value="Buscar">
-                    </form>
+                        <input type="search" name="name-financeiro" id="nameFinanceiro">
+                        <input type="submit" value="Buscar" onclick="relatorioEstudante()">
+                    </div>
                 </div>
-                <div id="res-relatorio">
-                    <p>Aluno: Chris Evans</p>
-                    <p>Turma: Hipátia</p>
-                    <p>Curso: Javascript</p>
-                    <p>Valor total: R$ 900</p>
-                    <p>Valor parcela: R$ 100</p>
-                    <p>N.º parcelas: 9</p>
+                <div id="resRelatorio">
+
                 </div>
             </div>
         </section>
