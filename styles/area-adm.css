@@ -1,0 +1,242 @@
+main {
+    display: flex;
+    height: 70vh;
+}
+
+aside {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: var(--black);
+    width: 20vw;
+}
+
+aside ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    margin-top: 2em;
+}
+
+aside li {
+    list-style: none;
+    color: var(--white);
+    cursor: pointer;
+}
+
+/* TURMAS */
+
+.turmas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3em;
+    background-color: var(--yellow);
+    width: 80vw;
+}
+
+.search-bar {
+    display: flex;
+}
+
+.search-bar input {
+    border: none;
+    width: 15vw;
+    height: 4vh;
+    outline: none;
+}
+
+.search-bar button {
+    border: none;
+    width: 6vw;
+    background-color: var(--black);
+    color: var(--white);
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+}
+
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas:
+        "card1 card2 card3 card4"
+        "card5 card6 card7 card8"
+    ;
+    gap: 30px;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--white);
+    border-radius: 12px;
+    padding: 1.5em 3em;
+}
+
+.cards h3 {
+    align-self: center;
+    margin-bottom: 1em;
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+}
+
+.cards p {
+    font-size: 1rem;
+    line-height: 1.3619rem;
+}
+
+.card1 {
+    grid-area: card1;
+}
+
+.card2 {
+    grid-area: card2;
+}
+
+.card3 {
+    grid-area: card3;
+}
+
+.card4 {
+    grid-area: card4;
+}
+
+.card5 {
+    grid-area: card5;
+}
+
+.card6 {
+    grid-area: card6;
+}
+
+.card7 {
+    grid-area: card7;
+}
+
+.card8 {
+    grid-area: card8;
+}
+
+/* FINAL TURMAS */
+
+/* MATRÍCULAS */
+
+.matriculas {
+    display: flex;
+    background-color: var(--yellow);
+    width: 80vw;
+    padding: 10vh 10vw;
+    gap: 15vw;
+}
+
+.form-wrapper h2 {
+    margin-bottom: 1em;
+}
+
+.form-matriculas {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-matriculas input {
+    width: 17vw;
+    height: 3vh;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    font-size: 1.5rem;
+    margin-bottom: 1.5vh;
+}
+
+.form-matriculas label {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 700;
+}
+
+.form-matriculas input[type=submit] {
+    background-color: var(--black);
+    color: var(--white);
+    margin-top: 3vh;
+    height: 4vh;
+    border-radius: 9px;
+    font-size: 1rem;
+}
+
+.aluno-title-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    margin-bottom: 1em;
+}
+
+/* FINAL MATRÍCULAS */
+
+/* FINANCEIRO */
+
+.financeiro {
+    display: flex;
+    background-color: var(--yellow);
+    width: 80vw;
+    padding: 10vh 10vw;
+    gap: 15vw;
+}
+
+.financeiro h2 {
+    margin-bottom: 1em;
+}
+
+.financeiro input {
+    width: 17vw;
+    height: 3vh;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    font-size: 1.5rem;
+    margin-bottom: 1.5vh;
+}
+
+.financeiro input[type=submit] {
+    background-color: var(--black);
+    color: var(--white);
+    margin-top: 3vh;
+    height: 4vh;
+    border-radius: 9px;
+    font-size: 1rem;
+}
+
+.financeiro label {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 700;
+}
+
+.form-financeiro {
+    display: flex;
+    flex-direction: column;
+}
+
+#res-valor {
+    margin-top: 5vh;
+}
+
+#res-relatorio {
+    margin-top: 5vh;
+}
+
+.form-relatorio {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* FINAL FINANCEIRO */
+
+.hidden {
+    display: none;
+}

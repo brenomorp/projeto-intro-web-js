@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/global.css">
+    <link rel="stylesheet" href="./styles/area-adm.css">
     <title>Área ADM</title>
 </head>
 
@@ -27,88 +28,154 @@
         </nav>
     </header>
     <main>
-        <nav>
+        <aside>
             <ul>
-                <li><a href="./area-adm.html">Turmas</a></li>
-                <li><a href="./matriculas.html">Matriculas</a></li>
-                <li><a href="./financeiro.html">Financeiro Alunos</a></li>
+                <li>Turmas</li>
+                <li>Matrículas</li>
+                <li>Financeiro Alunos</li>
             </ul>
-        </nav>
-        <section>
-            <input type="search" name="search" id="search">
-            <button>Buscar</button>
-            <article>
-                <h3>Hipátia</h3>
-                <p><strong>Curso:</strong></p>
-                <p><strong>Início:</strong></p>
-                <p><strong>Término:</strong></p>
-                <p><strong>Número de alunos:</strong></p>
-                <p><strong>Período:</strong></p>
-                <p><strong>Concluído:</strong></p>
-            </article>
-            <article>
-                <h3>Sibyla</h3>
-                <p><strong>Curso:</strong></p>
-                <p><strong>Início:</strong></p>
-                <p><strong>Término:</strong></p>
-                <p><strong>Número de alunos:</strong></p>
-                <p><strong>Período:</strong></p>
-                <p><strong>Concluído:</strong></p>
-            </article>
-            <article>
-                <h3>Curie</h3>
-                <p><strong>Curso:</strong></p>
-                <p><strong>Início:</strong></p>
-                <p><strong>Término:</strong></p>
-                <p><strong>Número de alunos:</strong></p>
-                <p><strong>Período:</strong></p>
-                <p><strong>Concluído:</strong></p>
-            </article>
-            <article>
-                <h3>Zhenyi</h3>
-                <p><strong>Curso:</strong></p>
-                <p><strong>Início:</strong></p>
-                <p><strong>Término:</strong></p>
-                <p><strong>Número de alunos:</strong></p>
-                <p><strong>Período:</strong></p>
-                <p><strong>Concluído:</strong></p>
-            </article>
-            <article>
-                <h3>Clarke</h3>
-                <p><strong>Curso:</strong></p>
-                <p><strong>Início:</strong></p>
-                <p><strong>Término:</strong></p>
-                <p><strong>Número de alunos:</strong></p>
-                <p><strong>Período:</strong></p>
-                <p><strong>Concluído:</strong></p>
-            </article>
-            <article>
-                <h3>Blackwell</h3>
-                <p><strong>Curso:</strong></p>
-                <p><strong>Início:</strong></p>
-                <p><strong>Término:</strong></p>
-                <p><strong>Número de alunos:</strong></p>
-                <p><strong>Período:</strong></p>
-                <p><strong>Concluído:</strong></p>
-            </article>
-            <article>
-                <h3>Elion</h3>
-                <p><strong>Curso:</strong></p>
-                <p><strong>Início:</strong></p>
-                <p><strong>Término:</strong></p>
-                <p><strong>Número de alunos:</strong></p>
-                <p><strong>Período:</strong></p>
-                <p><strong>Concluído:</strong></p>
-            </article>
-            <article>
-                <h3>Burnell</h3>
-                <p><strong>Curso:</strong></p>
-                <p><strong>Início:</strong></p>
-                <p><strong>Término:</strong></p>
-                <p><strong>Número de alunos:</strong></p>
-                <p><strong>Período:</strong></p>
-                <p><strong>Concluído:</strong></p>
-            </article>
+        </aside>
+        <section class="turmas hidden" id="turmas">
+            <div class="search-bar">
+                <input type="search" name="search" id="search">
+                <button>Buscar</button>
+            </div>
+            <div class="cards-container">
+                <article class="cards card1" id="card1">
+                    <h3>Hipátia</h3>
+                    <p><strong>Curso:</strong> JavaScript</p>
+                    <p><strong>Início:</strong> 31/12/2031</p>
+                    <p><strong>Término:</strong> 31/12/2032</p>
+                    <p><strong>Número de alunos:</strong> 322</p>
+                    <p><strong>Período:</strong> Noturno</p>
+                    <p><strong>Concluído:</strong> Não</p>
+                </article>
+                <article class="cards card2" id="card2">
+                    <h3>Sibyla</h3>
+                    <p><strong>Curso:</strong></p>
+                    <p><strong>Início:</strong></p>
+                    <p><strong>Término:</strong></p>
+                    <p><strong>Número de alunos:</strong></p>
+                    <p><strong>Período:</strong></p>
+                    <p><strong>Concluído:</strong></p>
+                </article>
+                <article class="cards card3" id="card3">
+                    <h3>Curie</h3>
+                    <p><strong>Curso:</strong></p>
+                    <p><strong>Início:</strong></p>
+                    <p><strong>Término:</strong></p>
+                    <p><strong>Número de alunos:</strong></p>
+                    <p><strong>Período:</strong></p>
+                    <p><strong>Concluído:</strong></p>
+                </article>
+                <article class="cards card4" id="card4">
+                    <h3>Zhenyi</h3>
+                    <p><strong>Curso:</strong></p>
+                    <p><strong>Início:</strong></p>
+                    <p><strong>Término:</strong></p>
+                    <p><strong>Número de alunos:</strong></p>
+                    <p><strong>Período:</strong></p>
+                    <p><strong>Concluído:</strong></p>
+                </article>
+                <article class="cards card5" id="card5">
+                    <h3>Clarke</h3>
+                    <p><strong>Curso:</strong></p>
+                    <p><strong>Início:</strong></p>
+                    <p><strong>Término:</strong></p>
+                    <p><strong>Número de alunos:</strong></p>
+                    <p><strong>Período:</strong></p>
+                    <p><strong>Concluído:</strong></p>
+                </article>
+                <article class="cards card6" id="card6">
+                    <h3>Blackwell</h3>
+                    <p><strong>Curso:</strong></p>
+                    <p><strong>Início:</strong></p>
+                    <p><strong>Término:</strong></p>
+                    <p><strong>Número de alunos:</strong></p>
+                    <p><strong>Período:</strong></p>
+                    <p><strong>Concluído:</strong></p>
+                </article>
+                <article class="cards card7" id="card7">
+                    <h3>Elion</h3>
+                    <p><strong>Curso:</strong></p>
+                    <p><strong>Início:</strong></p>
+                    <p><strong>Término:</strong></p>
+                    <p><strong>Número de alunos:</strong></p>
+                    <p><strong>Período:</strong></p>
+                    <p><strong>Concluído:</strong></p>
+                </article>
+                <article class="cards card8" id="card8">
+                    <h3>Burnell</h3>
+                    <p><strong>Curso:</strong></p>
+                    <p><strong>Início:</strong></p>
+                    <p><strong>Término:</strong></p>
+                    <p><strong>Número de alunos:</strong></p>
+                    <p><strong>Período:</strong></p>
+                    <p><strong>Concluído:</strong></p>
+                </article>
+            </div>
+        </section>
+        <section class="matriculas hidden" id="matriculas">
+            <div class="form-wrapper">
+                <h2>Matrículas</h2>
+                <form action="" class="form-matriculas">
+                    <label for="nome-matricula">Nome</label>
+                    <input type="text" name="nome-matricula" id="nome-matricula">
+                    <label for="curso">Curso</label>
+                    <input type="text" name="curso" id="curso">
+                    <label for="turma">Turma</label>
+                    <input type="text" name="turma" id="turma">
+                    <label for="nParcelas">Número de parcelas</label>
+                    <input type="number" name="nParcelas" id="nParcelas">
+                    <input type="submit" value="Matricular aluno">
+                </form>
+            </div>
+            <div class="aluno-matriculado">
+                <div class="aluno-title-wrapper">
+                    <h2>Aluno matriculado</h2>
+                    <img src="./assets/confirm-icon.svg" alt="Icone de confirmação">
+                </div>
+                <p>Aluno matriculado</p>
+                <p>Nome: Calvin Klein</p>
+                <p>Curso: Javascript</p>
+                <p>Turma: Clarke</p>
+            </div>
+        </section>
+        <section class="financeiro" id="financeiro">
+            <div>
+                <div>
+                    <h2>Financeiro</h2>
+                    <form action="" class="form-financeiro">
+                        <label for="cursosEscolhidos">Curso</label>
+                        <input type="text" name="cursosEscolhidos" id="cursosEscolhidos">
+                        <label for="nParcelas">Número de parcelas</label>
+                        <input type="text" name="nParcelas" id="nParcelas-Financeiro">
+                        <input type="submit" value="Ver valor">
+                    </form>
+                </div>
+                <div id="res-valor">
+                    <h2>Valor</h2>
+                    <p>Desconto de 20%. Parcelas de 2x de R$ 1880,00</p>
+                </div>
+            </div>
+            <div class="relatorio-wrapper">
+                <div>
+                    <h2>Relatório do Aluno</h2>
+                    <form action="" class="form-relatorio">
+                        <label for="name-financeiro">Nome</label>
+                        <input type="search" name="name-financeiro" id="name-financeiro">
+                        <input type="submit" value="Buscar">
+                    </form>
+                </div>
+                <div id="res-relatorio">
+                    <p>Aluno: Chris Evans</p>
+                    <p>Turma: Hipátia</p>
+                    <p>Curso: Javascript</p>
+                    <p>Valor total: R$ 900</p>
+                    <p>Valor parcela: R$ 100</p>
+                    <p>N.º parcelas: 9</p>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
