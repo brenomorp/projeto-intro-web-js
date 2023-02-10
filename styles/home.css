@@ -1,0 +1,105 @@
+.container-novo-ensino {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8em;
+    position: relative;
+    background: var(--yellow) url(../assets/background-home.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 70vh;
+    text-align: center;
+}
+
+.container-novo-ensino h2 {
+    font-size: 3.75rem;
+    line-height: 5.625rem;
+}
+
+.container-novo-ensino p {
+    font-size: 2.125rem;
+    line-height: 3.1875rem;
+}
+
+.container-novo-ensino a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--white);
+    background-color: var(--black);
+    width: 20em;
+    height: 3em;
+    font-size: 1.3rem;
+    border-radius: 10px;
+}
+
+.whatsapp-icon {
+    position: fixed;
+    right: 3em;
+    bottom: 3em;
+    width: 5rem;
+}
+
+.about-us-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100vh;
+    background-color: var(--black);
+    padding-bottom: 10em;
+}
+
+.about-us {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    gap: 2em;
+    color: var(--white);
+}
+
+.about-us h2 {
+    font-size: 2.5rem;
+    line-height: 3.75rem;
+}
+
+.about-us-container {
+    padding: 3em 0 6em 0;
+}
+
+.about-us-container p {
+    max-width: 55vw;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+}
+
+.depoimentos-container {
+    display: flex;
+    gap: 2em;
+    max-width: 80vw;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3.8125rem;
+    background-color: var(--white);
+    color: var(--black);
+    width: 20.625rem;
+    height: 23.25rem;
+    padding: 1.5em 1.5em;
+    border-radius: 10px;
+}
+
+.card img {
+    width: 6.75rem;
+}
+
+.card p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}

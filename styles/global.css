@@ -1,0 +1,152 @@
+:root {
+    --black: #0E0E0E;
+    --white: #FBFBFB;
+    --yellow: #F6C34A;
+    --grey: #707070;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* HEADER */
+
+header {
+    background-color: var(--white);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 15vh;
+}
+
+header img {
+    width: 18vw;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    gap: 3.5em;
+    justify-content: center;
+    align-items: center;
+}
+
+header li a {
+    text-decoration: none;
+    color: var(--black);
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 36px;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: var(--yellow);
+    width: 100%;
+    padding: 0 10em 2em 10em;
+
+    display: grid;
+    grid-template-rows: 1fr .5fr 3fr .5fr;
+    grid-template-columns: 1.5fr 1fr 1fr .5fr;
+    grid-template-areas:
+        " img . . ."
+        "adress-title links-title social-title area-title"
+        "map links social-icons area-icons"
+        "adress . . .";
+    align-content: center;
+    justify-content: center;
+    border-top: 2px solid var(--black);
+}
+
+footer>img {
+    grid-area: img;
+    align-self: center;
+}
+
+footer h4 {
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    margin-bottom: 1.5em;
+}
+
+footer a {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+footer>h4:nth-of-type(1) {
+    grid-area: adress-title;
+    align-self: center;
+}
+
+footer>h4:nth-of-type(2) {
+    grid-area: links-title;
+    align-self: center;
+}
+
+footer>h4:nth-of-type(3) {
+    grid-area: social-title;
+    align-self: center;
+}
+
+footer>h4:nth-of-type(4) {
+    grid-area: area-title;
+    align-self: center;
+}
+
+footer iframe {
+    grid-area: map;
+}
+
+.footer-links {
+    grid-area: links;
+}
+
+.links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.footer-social-icons {
+    grid-area: social-icons;
+    display: flex;
+    gap: 1em;
+    align-items: flex-start;
+}
+
+.footer-social-icons img {
+    width: 2rem;
+}
+
+.footer-area-links {
+    grid-area: area-icons;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.adress {
+    grid-area: adress;
+    align-self: center;
+}
+
+footer li {
+    list-style: none;
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+}
+
+footer a:hover {
+    color: var(--white);
+}
